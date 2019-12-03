@@ -10,7 +10,7 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 const styles = () => ({
   "@global": {
     body: {
-        backgroundColor: "#fafafa",
+        backgroundColor: "#03a9f4",
       // backgroundImage: 'linear-gradient(red)'
     }
   },
@@ -58,7 +58,7 @@ class Login extends Component {
   };
 
   render() {
-    const { classes, loginError, isAuthenticated, user } = this.props;
+    const { classes, loginError, isAuthenticated } = this.props;
     const { email } = this.state;
     if (isAuthenticated) {
       return <Redirect to={{

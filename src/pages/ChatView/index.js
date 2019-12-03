@@ -7,13 +7,8 @@ import MessageList from '../../components/MessageList';
 import SendMsg from '../../components/SendMsg';
 import IsTyping from '../../components/IsTyping';
 import PeopleList from '../../components/PeopleList'
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import MenuIcon from '@material-ui/icons/Menu';
 import { logoutUser } from "../../actions";
 
 class ChatScreen extends Component {
@@ -43,7 +38,7 @@ class ChatScreen extends Component {
   };
 
   componentDidMount () {
-    console.log('props', this.props)
+    // console.log('props', this.props)
     const { currentUsername, location } = this.props;
     const currentUser = this.props.currentUsername === false ? location.state.email:currentUsername;
     this.onUsernameSubmitted(currentUser);
