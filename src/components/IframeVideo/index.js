@@ -16,11 +16,12 @@ class IframeVideo extends Component {
 
   componentDidMount(){
     const { term } = this.props;
+    // console.log(term)
     searchYouTube({key: API_KEY, term: term, q: term, maxResults: 1}, (videos) => {
         console.log(videos);
         this.setState({ videoUri: `https://www.youtube.com/embed/${videos[0].id.videoId}`, isLoading: false});
     });
-    console.log('data', term)
+    // console.log('data', term)
   }
 
   render() {

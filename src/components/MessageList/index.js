@@ -45,8 +45,8 @@ class MessageList extends React.Component {
                 <Typography className="title" color="textSecondary" gutterBottom>
                   {index > 0 && ((message.senderId === messages[index-1].senderId) || currentUser.id === message.senderId) ? '':message.senderId}
                 </Typography>
-                { message.text[0] === '/' ?
-                <IframeVideo term={message.text.replace('/', '')} />
+                { (message.text).split(' ')[0] === '/youtube' ?
+                <IframeVideo term={message.text.replace('/youtube ', '')} />
                 :
                 <Typography className="txt" variant="body2" component="p">
                   {message.text}
